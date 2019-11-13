@@ -2,20 +2,21 @@
 <html>
     <head>
         <title>ahcalculator</title>
-    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.js"></script>
         <script>
                 function computex(){
                         var x=document.getElementById("a").value;
                         var x2=x*0.06;
-                        document.getElementById("x").innerHTML=x2.toFixed(2);
+                        document.getElementById("x").innerHTML=math.round(x2,2);
                 }
                 function computec(){
                         var x=document.getElementById("a").value;
                         var y=document.getElementById("b").value;
                         var c=x*0.06-y;
                         var d2=c*0.12;
-                        document.getElementById("c").innerHTML=c.toFixed(2);
-                        document.getElementById("y").innerHTML=d2.toFixed(2);
+                        document.getElementById("c").innerHTML=math.round(c,2);
+                        document.getElementById("y").innerHTML=math.round(d2,2);
                 }
     
                 function clear1(){
