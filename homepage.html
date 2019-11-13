@@ -6,14 +6,14 @@
         <script>
                 function computex(){
                         var x=document.getElementById("a").value;
-                        document.getElementById("x").innerHTML=x*0.06;
+                        document.getElementById("x").innerHTML=x*0.06.toFixed(2);
                 }
                 function computec(){
                         var x=document.getElementById("a").value;
                         var y=document.getElementById("b").value;
                         var c=x*0.06-y;
-                        document.getElementById("c").innerHTML=c;
-                        document.getElementById("y").innerHTML=c*0.12;
+                        document.getElementById("c").innerHTML=c.toFixed(2);
+                        document.getElementById("y").innerHTML=c*0.12.toFixed(2);
                 }
     
                 function clear1(){
@@ -29,11 +29,11 @@
 
     </head>
     <body>
-        <p>a:<input type="text" id="a" oninput="computex()"></p>
-        a*0.06<p id="x">0</p>
-        <p></p>b:<input type="text" id="b" oninput="computec()"></p>
-        c:<p id="c">0</p>
-        c*.012:<p id="y">0</p>
+        <p>营业收入:<input type="text" id="a" oninput="computex()"></p>
+        销项税额<p id="x">0</p>
+        <p></p>进项税额:<input type="text" id="b" oninput="computec()"></p>
+        应纳增值税:<p id="c">0</p>
+        附加税费:<p id="y">0</p>
         <button onclick="clear1()" >clear</button>
 
 
