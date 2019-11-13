@@ -6,14 +6,16 @@
         <script>
                 function computex(){
                         var x=document.getElementById("a").value;
-                        document.getElementById("x").innerHTML=x*0.06.toFixed(2);
+                        var x2=x*0.06;
+                        document.getElementById("x").innerHTML=x2.toFixed(2);
                 }
                 function computec(){
                         var x=document.getElementById("a").value;
                         var y=document.getElementById("b").value;
                         var c=x*0.06-y;
+                        var d2=c*0.12;
                         document.getElementById("c").innerHTML=c.toFixed(2);
-                        document.getElementById("y").innerHTML=c*0.12.toFixed(2);
+                        document.getElementById("y").innerHTML=d2.toFixed(2);
                 }
     
                 function clear1(){
