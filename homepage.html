@@ -9,7 +9,8 @@
                         var x=document.getElementById("a").value;
                         if(isNaN(x)){
                         document.getElementById("x").innerHTML="You'd better enter a number, bb~"}
-                        else{var x2=x*0.06;
+                        else{
+                        var x2=x*0.06;
                         document.getElementById("x").innerHTML=math.round(x2,2);}
                 }
                 function computec(){
@@ -19,8 +20,8 @@
                         document.getElementById("c").innerHTML="You'd better enter a number, bb~";
                         document.getElementById("y").innerHTML="Try to enter a number :)";
                         }
-                        else
-                        {var c=x*0.06-y;
+                        else{
+                        var c=x*0.06-y;
                         var d2=c*0.12;
                         document.getElementById("c").innerHTML=math.round(c,2);
                         document.getElementById("y").innerHTML=math.round(d2,2);
@@ -29,17 +30,18 @@
     
                 function clear1(){
                     document.getElementById("a").value="";
-                    document.getElementById("x").innerHTML=0;
+	      var zero=0;
+                    document.getElementById("x").innerHTML=zero.toFixed(2);
                     document.getElementById("b").value="";
-                    document.getElementById("c").innerHTML=0;
-                    document.getElementById("y").innerHTML=0;
+                    document.getElementById("c").innerHTML=zero.toFixed(2);
+                    document.getElementById("y").innerHTML=zero.toFixed(2);
                 }  
             </script>
 
             <style>
                 body{font-family:Arial, Helvetica, sans-serif,"微软雅黑";
                      background-color:#F5F5F5;
-                     margin: 0px 0px 0px 20px;}
+                     margin: 20px 0px 0px 20px;}
 
                 .button{font-size:20px;font-weight:1000;width:9%;}
 
@@ -49,10 +51,10 @@
     </head>
     <body>
         <p>营业收入:&ensp;&ensp;<input type="text" id="a" oninput="computex()"></p>
-        <p>销项税额:<div id="x">0</div></p>
+        <p>销项税额:<div id="x">0.00</div></p>
         <p></p>进项税额:&ensp;&ensp;<input type="text" id="b" oninput="computec()"></p>
-        <p>应纳增值税:<div id="c">0</div></p>
-        <p>附加税费:<div id="y">0</div></p>
+        <p>应纳增值税:<div id="c">0.00</div></p>
+        <p>附加税费:<div id="y">0.00</div></p>
         <br>
         <button class="button" onclick="clear1()" >清 空</button>
 
