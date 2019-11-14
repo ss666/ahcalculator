@@ -11,7 +11,7 @@
                         document.getElementById("x").innerHTML="You'd better enter a number, bb~"}
                         else{
                         var x2=x*0.06;
-                        document.getElementById("x").innerHTML=math.round(x2,2);}
+                        document.getElementById("x").innerHTML=math.round(x2,2).toFixed(2);}
                 }
                 function computec(){
                         var x=document.getElementById("a").value;
@@ -23,8 +23,8 @@
                         else{
                         var c=x*0.06-y;
                         var d2=c*0.12;
-                        document.getElementById("c").innerHTML=math.round(c,2);
-                        document.getElementById("y").innerHTML=math.round(d2,2);
+                        document.getElementById("c").innerHTML=math.round(c,2).toFixed(2);
+                        document.getElementById("y").innerHTML=math.round(d2,2).toFixed(2);
                         }
                 }
     
